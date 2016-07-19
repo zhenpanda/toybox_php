@@ -15,6 +15,37 @@ if (isset($_POST['submit'])) {
 	};
 }
 
+// func update existing users in db, shared in db_func
+if (isset($_POST['update'])) {
+	$username = $_POST['username'];
+	$password = $_POST['password'];
+	$id = $_POST['id'];
+	echo "updated user!" . $id;
+	// update user data sql
+	$query = "UPDATE users SET username='$username', password='$password' WHERE id= $id";
+	$result = mysqli_query($connection, $query);
+	if (!$result) {
+		die("Query failed" .mysqli_error($result));
+	};
+}
+
+// delete selected user from db, shar in db_func
+if (isset($_POST['delete'])) {
+	$id = $_POST['id'];
+	echo "delete user!" . $id;
+/*	$username = $_POST['username'];
+	$password = $_POST['password'];
+	$id = $_POST['id'];
+	echo "updated user!" . $id;
+	// update user data sql
+	$query = "UPDATE users SET username='$username', password='$password' WHERE id= $id";
+	$result = mysqli_query($connection, $query);
+	if (!$result) {
+		die("Query failed" .mysqli_error($result));
+	};*/
+}
+
+
 // func finds all users and store in $results
 function showAllUsers() {
 	// using connection from db.php
@@ -24,7 +55,6 @@ function showAllUsers() {
 	if (!$result) {
 		die("Query failed" .mysqli_error());
 	};
-
 	return $result;
 };
 

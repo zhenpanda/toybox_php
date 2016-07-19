@@ -7,7 +7,8 @@
 	<title></title>
 </head>
 <body>
-
+	<span>Create User</span>
+	<br>
 	<form action="db_read.php" method="post">
 	
 		<input type="text" name="username" placeholder="Enter Username">		
