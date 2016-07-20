@@ -33,16 +33,11 @@ if (isset($_POST['update'])) {
 if (isset($_POST['delete'])) {
 	$id = $_POST['id'];
 	echo "delete user!" . $id;
-/*	$username = $_POST['username'];
-	$password = $_POST['password'];
-	$id = $_POST['id'];
-	echo "updated user!" . $id;
-	// update user data sql
-	$query = "UPDATE users SET username='$username', password='$password' WHERE id= $id";
+	$query = "DELETE FROM users WHERE id= $id";
 	$result = mysqli_query($connection, $query);
 	if (!$result) {
 		die("Query failed" .mysqli_error($result));
-	};*/
+	};
 }
 
 

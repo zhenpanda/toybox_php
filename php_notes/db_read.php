@@ -26,7 +26,6 @@
 	?>
 	<!-- close php after loop -->
 </div>
-
 <br>
 <br>
 
@@ -34,8 +33,8 @@
 <div>
 	<span>Update User</span>
 	<br>
+
 	<form action="" method="post">
-	
 		<input type="text" name="username" placeholder="Enter Username">		
 		<input type="password" name="password" placeholder="Enter password">	
 		<!-- php populate id selection -->
@@ -51,7 +50,18 @@
 		</select>	
 		<br>
 		<input type="submit" name="update">	
-
 	</form>
-</div>
 
+</div>
+<br>
+<br>
+
+<!-- create form -->
+
+<div>
+	
+	<form action="form.php" method="">
+	  <button type="submit">Create a new User</button>
+	</form>
+
+</div>
