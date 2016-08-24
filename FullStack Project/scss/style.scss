@@ -1,119 +1,62 @@
-// examples
-// .notice {
-//   background: yellow;
-//   border: 5px solid #000;
-//   padding: 20px;
-//   &.alert {
-//     background: red;
-//     box-shadow: 0 0 10px red;
-//   }
-//   // nested selector
-//   a {
-//     color: #222;
-//     // nest nest selector modifiers
-//     &:hover {
-//       color: #313131;
-//     }
-//   }
-// }
-// // variable
-// $base: grey;
-// // string replace
-// $variable-name: left;
-// .girder {
-//   border-#{$variable-name}: 4px solid #ccc;
-//   h2 {
-//     font-size: 24px;
-//   }
-// }
-// .notice {
-//   border-#{$variable-name}: 8px solid #797979;
-//   a {
-//     color: #222;
-//   }
-// }
-// // mixins
-// @mixin assemble($bg: #fff, $pad: 10px) {
-//   background: $bg;
-//   border: 1px solid #ccc;
-//   padding: $pad;
-// }
-// .factory {
-//   @include assemble;
-// }
-// .highrise {
-//   @include assemble($bg: #797979, $pad: 20px);
-// }
-// @mixin modal($shadow...) {
-//   box-shadow: $shadow;
-//   border: 1px solid #ccc;
-// }
-// .modal {
-//   @include modal(inset 0 0 5px #000, 0 2px 5px #000);
-// }
-// // extend
-// .message {
-//   border: 1px solid #ccc;
-//   padding: 10px;
-//   color: #333;
-// }
-// .success {
-//   @extend .message;
-//   border-color: green;
-// }
-// .error {
-//   @extend .message;
-//   border-color: red;
-// }
-// .warning {
-//   @extend .message;
-//   border-color: yellow;
-// }
-// responsive
-
-// @mixin respond-to($media) {
-//   @if $media == desktop {
-//     @media (min-width: 960px) {
-//       @content;
-//     }
-//   } @else if $media == tablet {
-//     @media (min-width: 768px) {
-//       @content;
-//     }
-//   }
-// }
-// .factory {
-//   width: 100%;
-//   @include respond-to(desktop) {
-//     width: percentage(600px / 960px);
-//     background: red;
-//   }
-//   @include respond-to(tablet) {
-//     width: 50%;
-//     background: green;
-//   }
-// }
-
-@mixin respond-to($query) {
-  @media (min-width: $query) {
-    @content;
+//  Mixins
+@mixin no-gutter() {
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+// Header Area
+$bannerBackgroundColor: #e1e71b;
+$bannerFontSize: 14px;
+$bannerTextColor: #6b7007;
+$bannerBtnColor: #a8ae00;
+$bannerBtnFontSize: 12px;
+.banner{
+  background-color: $bannerBackgroundColor;
+}
+#banner {
+  @include no-gutter;
+  background-color: $bannerBackgroundColor;
+  font-size: $bannerFontSize;
+  color: $bannerTextColor;
+  margin: auto;
+  width: 916px;
+  .container {
+     background-color: $bannerBackgroundColor;
+     height: 70px;
+  }
+  .row {
+    @include no-gutter;
+    margin: 12px 0 12px 0;
+  }
+  .part{
+    @include no-gutter;
+    margin: 11px 0 11px 0;
+  }
+  .btn {
+    width: 108px;
+    height: 25px;
+    background: $bannerBtnColor;
+    color: white;
+    padding: 0;
+    font-size: $bannerBtnFontSize;
+    margin-left: 6px;
+  }
+  #rbanner{
+    margin: 23px 0 23px 0px;
+  }
+  #divider {
+    width: 1px;
+    background-color: $bannerBtnColor;
+    height: 46px;
+    margin: auto;
   }
 }
 
-.factory {
-  width: 100%;
-  @include respond-to(960px) {
-    width: percentage(600px / 960px);
-    background: red;
-  }
-  @include respond-to(768px) {
-    width: 50%;
-    // background: green;
-  }
+// Responsive
+//Small devices (tablets, 768px and up)
+@media (min-width: 768px) {
 }
-
-
-
-
-
-// Container Sass
+// Medium devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
