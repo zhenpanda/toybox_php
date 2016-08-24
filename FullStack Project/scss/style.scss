@@ -5,58 +5,159 @@
   padding-right: 0;
   padding-left: 0;
 }
+@mixin body-width() {
+  //Small devices (phone)
+  @media (max-width: 480px) {
+    width: 440px;
+  }
+  //Small devices (tablets, 768px and up)
+  // @media (min-width: 768px) {
+  //   width: 768px;
+  // }
+  // Medium devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    width: 916px;
+  }
+}
+@mixin bgGrad() {
+  background: #f2f2f2 url(../assets/imgs/bg.png) repeat-y center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Shared
+$tealColor: #47c8ab;
+$tealLiteColor: #87e2d1;
+
 // Header Area
 $bannerBackgroundColor: #e1e71b;
 $bannerFontSize: 14px;
 $bannerTextColor: #6b7007;
 $bannerBtnColor: #a8ae00;
-$bannerBtnFontSize: 12px;
-.banner{
+$bannerBtnFontSize: 11px;
+#bannerBG{
   background-color: $bannerBackgroundColor;
 }
 #banner {
   @include no-gutter;
+  @include body-width;
+  margin: auto;
   background-color: $bannerBackgroundColor;
   font-size: $bannerFontSize;
   color: $bannerTextColor;
-  margin: auto;
-  width: 916px;
-  .container {
-     background-color: $bannerBackgroundColor;
-     height: 70px;
-  }
-  .row {
+  .banner-parts{
     @include no-gutter;
-    margin: 12px 0 12px 0;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 11px;
   }
-  .part{
-    @include no-gutter;
-    margin: 11px 0 11px 0;
+  #left-text {
+    margin-left: 23px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
-  .btn {
+  #right-text {
+    margin-right: 23px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .text-space {
+    margin-right: 6px;
+  }
+  .banner-btn {
     width: 108px;
     height: 25px;
     background: $bannerBtnColor;
+    font-size: $bannerBtnFontSize;
     color: white;
     padding: 0;
-    font-size: $bannerBtnFontSize;
-    margin-left: 6px;
-  }
-  #rbanner{
-    margin: 23px 0 23px 0px;
   }
   #divider {
-    width: 1px;
     background-color: $bannerBtnColor;
+    width: 1px;
     height: 46px;
     margin: auto;
   }
 }
 
-// Responsive
-//Small devices (tablets, 768px and up)
-@media (min-width: 768px) {
+// Navigation Area
+$navBarBigFontSize: 20px;
+$navBarFontColor: #787777;
+$appointmentBtnColor: #b3b3b3;
+$navLinksFontSize: 14px;
+#navBarBG {
+  @include bgGrad;
 }
-// Medium devices (desktops, 992px and up)
-@media (min-width: 992px) {
+#navBar {
+  @include body-width;
+  @include no-gutter;
+  margin: auto;
+  height: 390px;
+  #leftImg {
+    margin: 22px 0 22px 22px;
+  }
+  .no-gut {
+    @include no-gutter;
+  }
+  #call {
+    font-size: $navBarBigFontSize;
+    color: $navBarFontColor;
+    margin: 36px 30px 0 222px;
+  }
+  #contact {
+    width: 207px;
+  }
+  #phone-num {
+    font-weight: 600;
+  }
+  #navBtns {
+    margin: 11px 0 24px 98px;
+  }
+  #patient-btn {
+    height: 30px;
+    width: 136px;
+    margin-right: 12px;
+    background-color: $tealColor;
+    font-size: $bannerBtnFontSize;
+    color: white;
+  }
+  #appointment-btn {
+    height: 30px;
+    width: 180px;
+    background-color: $appointmentBtnColor;
+    font-size: $bannerBtnFontSize;
+    color: white;
+  }
+  #navTop {
+    background-color:$tealLiteColor;
+    height: 4px;
+  }
+  #navBarList {
+    height: 36px;
+    padding: 8px 0 12px 0;
+    background-color: $tealColor;
+  }
+  ul {
+    background-color: $tealColor;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li{
+    font-weight: 400;
+    display: inline;
+    color: white;
+    font-size: $navLinksFontSize;
+  }
+  .link{
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  a:hover {
+    opacity: .5;
+    text-decoration: none;
+  }
+  #hero-img{
+    width: 100%;
+  }
 }
