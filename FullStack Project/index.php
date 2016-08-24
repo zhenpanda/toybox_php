@@ -9,7 +9,9 @@
   <body>
     <!-- Banner -->
     <?php include "includes/markdown/banner.php"; ?>
-    <!-- NavBar with hero Img -->
+    <!-- NavBar & Hero Img -->
     <?php include "includes/markdown/navigation.php"; ?>
+    <!-- Form -->
+    <?php include "includes/markdown/form.php"; ?>
   </body>
 </html>

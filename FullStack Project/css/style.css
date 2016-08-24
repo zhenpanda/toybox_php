@@ -13,7 +13,7 @@
   @media (max-width: 480px) {
     #banner {
       width: 440px; } }
-  @media (min-width: 992px) {
+  @media (min-width: 960px) {
     #banner {
       width: 916px; } }
   #banner .banner-parts {
@@ -57,21 +57,20 @@
   margin-right: 0;
   padding-right: 0;
   padding-left: 0;
-  margin: auto;
-  height: 390px; }
+  margin: auto; }
   @media (max-width: 480px) {
     #navBar {
       width: 440px; } }
-  @media (min-width: 992px) {
+  @media (min-width: 960px) {
     #navBar {
       width: 916px; } }
-  #navBar #leftImg {
-    margin: 22px 0 22px 22px; }
   #navBar .no-gut {
     margin-left: 0;
     margin-right: 0;
     padding-right: 0;
     padding-left: 0; }
+  #navBar #leftImg {
+    margin: 22px 0 22px 22px; }
   #navBar #call {
     font-size: 20px;
     color: #787777;
@@ -111,8 +110,7 @@
     font-weight: 400;
     display: inline;
     color: white;
-    font-size: 14px; }
-  #navBar .link {
+    font-size: 14px;
     margin-left: 22px;
     margin-right: 22px; }
   #navBar a:hover {
@@ -120,5 +118,54 @@
     text-decoration: none; }
   #navBar #hero-img {
     width: 100%; }
+  #navBar #hero-text {
+    position: relative;
+    margin-left: 45px; }
+  #navBar #contact-text {
+    position: absolute;
+    top: -150px;
+    font-size: 27px;
+    color: #787777; }
+  #navBar #info-text {
+    position: absolute;
+    font-size: 15px;
+    color: #787777;
+    top: -105px;
+    width: 260px; }
+
+#formBG {
+  background: #f2f2f2 url(../assets/imgs/bg.png) repeat-y center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+#form {
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+  margin: auto;
+  height: 704px; }
+  @media (max-width: 480px) {
+    #form {
+      width: 440px; } }
+  @media (min-width: 960px) {
+    #form {
+      width: 916px; } }
+  #form .no-gut {
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0; }
+  @media (max-width: 480px) {
+    #form #form-top {
+      margin-top: 38px;
+      height: 658px;
+      font-size: 18px; }
+    #form #form-left {
+      color: #787777;
+      margin: auto;
+      text-align: center; }
+    #form #paitent-form {
+      margin-left: 265px; } }
 
 /*# sourceMappingURL=style.css.map */

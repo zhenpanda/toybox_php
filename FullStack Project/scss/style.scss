@@ -10,12 +10,7 @@
   @media (max-width: 480px) {
     width: 440px;
   }
-  //Small devices (tablets, 768px and up)
-  // @media (min-width: 768px) {
-  //   width: 768px;
-  // }
-  // Medium devices (desktops, 992px and up)
-  @media (min-width: 992px) {
+  @media (min-width: 960px) {
     width: 916px;
   }
 }
@@ -28,6 +23,7 @@
 // Shared
 $tealColor: #47c8ab;
 $tealLiteColor: #87e2d1;
+$greyFrontColor: #787777;
 
 // Header Area
 $bannerBackgroundColor: #e1e71b;
@@ -82,26 +78,27 @@ $bannerBtnFontSize: 11px;
 
 // Navigation Area
 $navBarBigFontSize: 20px;
-$navBarFontColor: #787777;
 $appointmentBtnColor: #b3b3b3;
 $navLinksFontSize: 14px;
+$contactFontSize: 27px;
+$infoFontSize: 15px;
 #navBarBG {
   @include bgGrad;
 }
 #navBar {
   @include body-width;
   @include no-gutter;
-  margin: auto;
-  height: 390px;
-  #leftImg {
-    margin: 22px 0 22px 22px;
-  }
   .no-gut {
     @include no-gutter;
   }
+  margin: auto;
+  // height: 390px;
+  #leftImg {
+    margin: 22px 0 22px 22px;
+  }
   #call {
     font-size: $navBarBigFontSize;
-    color: $navBarFontColor;
+    color: $greyFrontColor;
     margin: 36px 30px 0 222px;
   }
   #contact {
@@ -148,8 +145,6 @@ $navLinksFontSize: 14px;
     display: inline;
     color: white;
     font-size: $navLinksFontSize;
-  }
-  .link{
     margin-left: 22px;
     margin-right: 22px;
   }
@@ -160,4 +155,55 @@ $navLinksFontSize: 14px;
   #hero-img{
     width: 100%;
   }
+  #hero-text {
+    position: relative;
+    margin-left: 45px;
+  }
+  #contact-text {
+    position: absolute;
+    top: -150px;
+    font-size: $contactFontSize;
+    color: $greyFrontColor;
+  }
+  #info-text {
+    position: absolute;
+    font-size: $infoFontSize;
+    color: $greyFrontColor;
+    top: -105px;
+    width: 260px;
+  }
+}
+
+
+// Form Area
+$formFontSize: 18px;
+#formBG {
+  @include bgGrad;
+}
+#form {
+  @include body-width;
+  @include no-gutter;
+  margin: auto;
+  .no-gut {
+    @include no-gutter;
+  }
+  height: 704px;
+  // phone view CSS
+  @media (max-width: 480px) {
+    // background-color: blue;
+    #form-top {
+      margin-top: 38px;
+      height: 658px;
+      font-size: $formFontSize;
+    }
+    #form-left {
+      color: $greyFrontColor;
+      margin: auto;
+      text-align: center;
+    }
+    #paitent-form {
+      margin-left: 265px;
+    }
+  }
+
 }
