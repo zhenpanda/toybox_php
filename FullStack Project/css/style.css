@@ -1,6 +1,11 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: red; }
+.factory {
+  width: 100%; }
+  @media (min-width: 960px) {
+    .factory {
+      width: 62.5%;
+      background: red; } }
+  @media (min-width: 768px) {
+    .factory {
+      width: 50%; } }
 
 /*# sourceMappingURL=style.css.map */
