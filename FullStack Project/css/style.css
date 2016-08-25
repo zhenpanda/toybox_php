@@ -13,7 +13,7 @@
   @media (max-width: 480px) {
     #banner {
       width: 440px; } }
-  @media (min-width: 960px) {
+  @media (min-width: 768px) {
     #banner {
       width: 916px; } }
   #banner .banner-parts {
@@ -61,7 +61,7 @@
   @media (max-width: 480px) {
     #navBar {
       width: 440px; } }
-  @media (min-width: 960px) {
+  @media (min-width: 768px) {
     #navBar {
       width: 916px; } }
   #navBar .no-gut {
@@ -148,7 +148,7 @@
   @media (max-width: 480px) {
     #form {
       width: 440px; } }
-  @media (min-width: 960px) {
+  @media (min-width: 768px) {
     #form {
       width: 916px; } }
   #form .no-gut {
@@ -156,54 +156,109 @@
     margin-right: 0;
     padding-right: 0;
     padding-left: 0; }
-  #form .input {
-    width: 400px;
-    height: 50px;
-    margin-top: 25px;
-    margin-bottom: 5px; }
-  #form #subject {
-    margin-left: 20px;
-    font-size: 16px;
-    color: #aaaaaa; }
-  #form #heard {
-    margin-left: 20px;
-    font-size: 16px;
-    color: #aaaaaa; }
-  @media (max-width: 480px) {
-    #form {
-      /* show the placeholder when input has no content (no content = invalid) */
-      /* hide the placeholder when input has some text typed in */ }
-      #form #form-top {
-        margin-top: 38px;
-        height: 658px;
-        font-size: 18px; }
-      #form #form-left {
-        color: #787777;
-        margin: auto;
-        text-align: center; }
-      #form #paitent-form {
-        margin-left: 265px; }
-      #form input[required] + label {
+  #form .star {
+    font-weight: 800;
+    color: #47c8ab; }
+  @media (min-width: 481px) {
+    #form #form-left {
+      color: #787777;
+      font-size: 15px;
+      margin-left: 46px;
+      margin-top: 50px; }
+      #form #form-left #form-text {
+        display: inline;
+        margin-right: 106px; }
+      #form #form-left #paitent-form {
+        display: inline; }
+      #form #form-left #form-no {
+        margin-left: 20px;
+        margin-bottom: 30px; }
+      #form #form-left .input {
+        width: 250px;
+        height: 40px; }
+      #form #form-left input[required] + label {
         color: #aaaaaa;
-        position: absolute;
-        font-size: 16px;
-        left: 32px; }
-      #form input[required] + label:after {
-        content: '*';
-        color: #47c8ab; }
-      #form input[required]:valid + label {
-        display: none; }
-      #form #first-name-placeholder {
-        bottom: 710px; }
-      #form #last-name-placeholder {
-        bottom: 630px; }
-      #form #email-placeholder {
-        bottom: 550px; }
-      #form #phone-placeholder {
-        bottom: 470px; }
-      #form #comments-area {
-        height: 180px; }
-      #form #details-placeholder {
-        bottom: 15px; } }
+        position: absolute; }
+      #form #form-left #first-name {
+        margin-right: 20px;
+        margin-bottom: 30px; }
+      #form #form-left #email {
+        margin-right: 20px;
+        margin-bottom: 30px; }
+      #form #form-left #first-name-placeholder {
+        left: 10px;
+        top: 57px; }
+      #form #form-left #last-name-placeholder {
+        left: 285px;
+        top: 57px; }
+      #form #form-left #email-placeholder {
+        left: 10px;
+        top: 128px; }
+      #form #form-left #phone-placeholder {
+        left: 285px;
+        top: 128px; }
+      #form #form-left #subject {
+        width: 524px;
+        margin-bottom: 30px;
+        color: #aaaaaa; }
+      #form #form-left #comments-area {
+        width: 524px;
+        height: 120px;
+        margin-bottom: 30px; }
+      #form #form-left #heard {
+        display: inline;
+        width: 250px;
+        height: 40px;
+        color: #aaaaaa;
+        margin-right: 20px; }
+      #form #form-left #details-placeholder {
+        left: 285px;
+        top: 423px; } }
+  @media (max-width: 480px) {
+    #form .input {
+      width: 400px;
+      height: 50px;
+      margin-top: 25px;
+      margin-bottom: 5px; }
+    #form #form-top {
+      margin-top: 38px;
+      height: 658px;
+      font-size: 18px; }
+    #form #form-left {
+      color: #787777;
+      margin: auto;
+      text-align: center; }
+    #form #paitent-form {
+      margin-left: 265px; }
+    #form input[required] + label {
+      color: #aaaaaa;
+      position: absolute;
+      font-size: 16px;
+      left: 32px; }
+    #form #first-name-placeholder {
+      bottom: 710px; }
+    #form #last-name-placeholder {
+      bottom: 630px; }
+    #form #email-placeholder {
+      bottom: 550px; }
+    #form #phone-placeholder {
+      bottom: 470px; }
+    #form #comments-area {
+      height: 180px; }
+    #form #details-placeholder {
+      bottom: 15px; }
+    #form #subject {
+      margin-left: 20px;
+      font-size: 16px;
+      color: #aaaaaa; }
+    #form #heard {
+      margin-left: 20px;
+      font-size: 16px;
+      color: #aaaaaa; } }
+  #form input[required] + label:after {
+    content: '*';
+    color: #47c8ab; }
+  #form input[required]:valid + label {
+    display: none; }
 
 /*# sourceMappingURL=style.css.map */

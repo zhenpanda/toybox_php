@@ -6,11 +6,10 @@
   padding-left: 0;
 }
 @mixin body-width() {
-  //Small devices (phone)
   @media (max-width: 480px) {
     width: 440px;
   }
-  @media (min-width: 960px) {
+  @media (min-width: 768px) {
     width: 916px;
   }
 }
@@ -174,9 +173,9 @@ $infoFontSize: 15px;
   }
 }
 
-
 // Form Area
 $formFontSize: 18px;
+$formFontSizeSm: 15px;
 $inputPlaceholdColor: #aaaaaa;
 #formBG {
   @include bgGrad;
@@ -189,25 +188,93 @@ $inputPlaceholdColor: #aaaaaa;
     @include no-gutter;
   }
   height: 704px;
-  .input {
-    width: 400px;
-    height: 50px;
-    margin-top: 25px;
-    margin-bottom: 5px;
+  .star {
+    font-weight: 800;
+    color: $tealColor;
   }
-  #subject {
-    margin-left: 20px;
-    font-size: 16px;
-    color: $inputPlaceholdColor;
-  }
-  #heard {
-    margin-left: 20px;
-    font-size: 16px;
-    color: $inputPlaceholdColor;
+  // desktop view CSS
+  @media (min-width: 481px) {
+    #form-left {
+      color: $greyFrontColor;
+      font-size: $formFontSizeSm;
+      margin-left: 46px;
+      margin-top: 50px;
+      #form-text {
+        display: inline;
+        margin-right: 106px;
+      }
+      #paitent-form{
+        display: inline;
+      }
+      #form-no{
+        margin-left: 20px;
+        margin-bottom: 30px;
+      }
+      .input {
+        width: 250px;
+        height: 40px;
+      }
+      // placeholder style
+      input[required] + label {
+        color: $inputPlaceholdColor;
+        position: absolute;
+      }
+      #first-name {
+        margin-right: 20px;
+        margin-bottom: 30px;
+      }
+      #email {
+        margin-right: 20px;
+        margin-bottom: 30px;
+      }
+      #first-name-placeholder {
+        left: 10px;
+        top: 57px;
+      }
+      #last-name-placeholder {
+        left: 285px;
+        top: 57px;
+      }
+      #email-placeholder {
+        left: 10px;
+        top: 128px;
+      }
+      #phone-placeholder {
+        left: 285px;
+        top: 128px;
+      }
+      #subject {
+        width: 524px;
+        margin-bottom: 30px;
+        color: $inputPlaceholdColor;
+      }
+      #comments-area {
+        width: 524px;
+        height: 120px;
+        margin-bottom: 30px;
+      }
+      #heard {
+        display: inline;
+        width: 250px;
+        height: 40px;
+        color: $inputPlaceholdColor;
+        margin-right: 20px;
+      }
+      #details-placeholder {
+        left: 285px;
+        top: 423px;
+      }
+    }
   }
   // phone view CSS
   @media (max-width: 480px) {
     // background-color: blue;
+    .input {
+      width: 400px;
+      height: 50px;
+      margin-top: 25px;
+      margin-bottom: 5px;
+    }
     #form-top {
       margin-top: 38px;
       height: 658px;
@@ -221,33 +288,11 @@ $inputPlaceholdColor: #aaaaaa;
     #paitent-form {
       margin-left: 265px;
     }
-    // placeholder style
-    // input[type="input-text"] {
-    //   width: 400px;
-    //   height: 50px;
-    //   margin-top: 25px;
-    //   margin-bottom: 5px;
-    // }
-    // input[type=submit] {
-    //   width: auto;
-    // }
     input[required] + label {
       color: $inputPlaceholdColor;
       position: absolute;
       font-size: 16px;
       left: 32px;
-    }
-    input[required] + label:after {
-      content:'*';
-      color: $tealColor;
-    }
-    /* show the placeholder when input has no content (no content = invalid) */
-    // input[required]:invalid + label {
-    //   display: inline-block;
-    // }
-    /* hide the placeholder when input has some text typed in */
-    input[required]:valid + label{
-      display: none;
     }
     #first-name-placeholder {
       bottom: 710px;
@@ -267,6 +312,22 @@ $inputPlaceholdColor: #aaaaaa;
     #details-placeholder {
       bottom: 15px;
     }
+    #subject {
+      margin-left: 20px;
+      font-size: 16px;
+      color: $inputPlaceholdColor;
+    }
+    #heard {
+      margin-left: 20px;
+      font-size: 16px;
+      color: $inputPlaceholdColor;
+    }
   }
-
+  input[required] + label:after {
+    content:'*';
+    color: $tealColor;
+  }
+  input[required]:valid + label{
+    display: none;
+  }
 }
