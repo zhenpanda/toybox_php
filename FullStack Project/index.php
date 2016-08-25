@@ -7,11 +7,15 @@
     <?php include "includes/header.php"; ?>
   </head>
   <body>
+
     <!-- Banner -->
     <?php include "includes/markdown/banner.php"; ?>
-    <!-- NavBar & Hero Img -->
+    <!-- NavBar -->
     <?php include "includes/markdown/navigation.php"; ?>
     <!-- Form -->
     <?php include "includes/markdown/form.php"; ?>
+    <!-- Footer -->
+    <?php include "includes/markdown/footer.php"; ?>
+
   </body>
 </html>

@@ -9,7 +9,7 @@
   @media (max-width: 480px) {
     width: 440px;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     width: 916px;
   }
 }
@@ -18,11 +18,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@mixin bgBotGrad() {
+  background: #f2f2f2 repeat-y center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 // Shared
 $tealColor: #47c8ab;
 $tealLiteColor: #87e2d1;
 $greyFrontColor: #787777;
+$liteGreyColor: #fbfbfb;
 
 // Header Area
 $bannerBackgroundColor: #e1e71b;
@@ -176,6 +182,7 @@ $infoFontSize: 15px;
 // Form Area
 $formFontSize: 18px;
 $formFontSizeSm: 15px;
+$formFontSizeTiny: 11px;
 $inputPlaceholdColor: #aaaaaa;
 #formBG {
   @include bgGrad;
@@ -184,91 +191,147 @@ $inputPlaceholdColor: #aaaaaa;
   @include body-width;
   @include no-gutter;
   margin: auto;
+  background-color: $liteGreyColor;
   .no-gut {
     @include no-gutter;
   }
-  height: 704px;
   .star {
     font-weight: 800;
     color: $tealColor;
   }
+  // shared view
+  #require-text {
+    color: $greyFrontColor;
+  }
+  #office-text {
+    color: $tealColor;
+    font-size: $formFontSize;
+    font-weight: 400;
+    margin-bottom: 22px;
+  }
+  #text-block {
+    margin-top: 34px;
+    margin-bottom: 45px;
+    width: 500px;
+    color: $greyFrontColor;
+    font-size: $formFontSizeTiny;
+  }
+  #location-text {
+    margin-top: 30px;
+    margin-bottom: 18px;
+    width: 200px;
+    color: $greyFrontColor;
+  }
+  #tel-phone-text {
+    color: $greyFrontColor;
+  }
   // desktop view CSS
   @media (min-width: 481px) {
+    $placeholderOffsetLeft: 60;
+    $placeholderOffsetTop: 57;
+    padding-top: 50px;
+    #form-main {
+      width: 530px;
+    }
     #form-left {
-      color: $greyFrontColor;
+    color: $greyFrontColor;
+    font-size: $formFontSizeSm;
+    padding-left: 48px;
+    }
+    #form-text {
+      display: inline;
+      margin-right: 106px;
+    }
+    #paitent-form{
+      display: inline;
+    }
+    #form-no{
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+    .input {
+      width: 250px;
+      height: 40px;
+    }
+    // placeholder style
+    input[required] + label {
+      color: $inputPlaceholdColor;
+      position: absolute;
+    }
+    #first-name {
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+    #email {
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+    //
+    #first-name-placeholder {
+      left: $placeholderOffsetLeft + px;
+      top: $placeholderOffsetTop + px;
+    }
+    #last-name-placeholder {
+      left: ($placeholderOffsetLeft + 275) + px;
+      top: $placeholderOffsetTop + px;
+    }
+    #email-placeholder {
+      left: $placeholderOffsetLeft + px;
+      top: ($placeholderOffsetTop + 70) + px;
+    }
+    #phone-placeholder {
+      left: ($placeholderOffsetLeft + 275) + px;
+      top: ($placeholderOffsetTop + 70) + px;
+    }
+    #subject {
+      width: 524px;
+      margin-bottom: 30px;
+      color: $inputPlaceholdColor;
+    }
+    #comments-area {
+      width: 524px;
+      height: 120px;
+      margin-bottom: 30px;
+    }
+    #heard {
+      display: inline;
+      width: 250px;
+      height: 40px;
+      color: $inputPlaceholdColor;
+      margin-right: 20px;
+    }
+    #details-placeholder {
+      left: ($placeholderOffsetLeft + 275) + px;
+      top: ($placeholderOffsetTop + 365) + px;
+    }
+    #desktop-form-tail {
+      margin-top: 30px;
+    }
+    #require-text {
+      color: $tealColor;
+      width: 135px;
+      display: inline;
+    }
+    #send-btn {
+      height: 40px;
+      width: 90px;
+      background-color: $tealColor;
       font-size: $formFontSizeSm;
-      margin-left: 46px;
-      margin-top: 50px;
-      #form-text {
-        display: inline;
-        margin-right: 106px;
-      }
-      #paitent-form{
-        display: inline;
-      }
-      #form-no{
-        margin-left: 20px;
-        margin-bottom: 30px;
-      }
-      .input {
-        width: 250px;
-        height: 40px;
-      }
-      // placeholder style
-      input[required] + label {
-        color: $inputPlaceholdColor;
-        position: absolute;
-      }
-      #first-name {
-        margin-right: 20px;
-        margin-bottom: 30px;
-      }
-      #email {
-        margin-right: 20px;
-        margin-bottom: 30px;
-      }
-      #first-name-placeholder {
-        left: 10px;
-        top: 57px;
-      }
-      #last-name-placeholder {
-        left: 285px;
-        top: 57px;
-      }
-      #email-placeholder {
-        left: 10px;
-        top: 128px;
-      }
-      #phone-placeholder {
-        left: 285px;
-        top: 128px;
-      }
-      #subject {
-        width: 524px;
-        margin-bottom: 30px;
-        color: $inputPlaceholdColor;
-      }
-      #comments-area {
-        width: 524px;
-        height: 120px;
-        margin-bottom: 30px;
-      }
-      #heard {
-        display: inline;
-        width: 250px;
-        height: 40px;
-        color: $inputPlaceholdColor;
-        margin-right: 20px;
-      }
-      #details-placeholder {
-        left: 285px;
-        top: 423px;
-      }
+      color: white;
+      margin-left: 295px;
+    }
+  }
+  // tablet view CSS
+  @media (max-width: 570px) {
+    $placeholderOffsetLeft: 60;
+    $placeholderOffsetTop: 75;
+    #form-left {
+      padding-left: 28px;
     }
   }
   // phone view CSS
+  $placeholderOffset: 1215;
   @media (max-width: 480px) {
-    // background-color: blue;
     .input {
       width: 400px;
       height: 50px;
@@ -282,8 +345,9 @@ $inputPlaceholdColor: #aaaaaa;
     }
     #form-left {
       color: $greyFrontColor;
-      margin: auto;
       text-align: center;
+      margin: auto;
+      padding-left: 0px;
     }
     #paitent-form {
       margin-left: 265px;
@@ -294,23 +358,24 @@ $inputPlaceholdColor: #aaaaaa;
       font-size: 16px;
       left: 32px;
     }
+    //placeholder offsets
     #first-name-placeholder {
-      bottom: 710px;
+      bottom: ($placeholderOffset) + px;
     }
     #last-name-placeholder {
-      bottom: 630px;
+      bottom: ($placeholderOffset - 80 ) + px;
     }
     #email-placeholder {
-      bottom: 550px;
+      bottom: ($placeholderOffset - (80 * 2)) + px;
     }
     #phone-placeholder {
-      bottom: 470px;
+      bottom: ($placeholderOffset - (80 * 3)) + px;
     }
     #comments-area {
-      height: 180px;
+      height: 250px;
     }
     #details-placeholder {
-      bottom: 15px;
+      bottom: ($placeholderOffset - (80 * 9.55)) + px;
     }
     #subject {
       margin-left: 20px;
@@ -322,7 +387,37 @@ $inputPlaceholdColor: #aaaaaa;
       font-size: 16px;
       color: $inputPlaceholdColor;
     }
+    #require-text {
+      color: $greyFrontColor;
+      text-align: center;
+      display: block;
+      margin-top: 30px;
+    }
+    #office-text {
+      color: $tealColor;
+      font-size: $formFontSize;
+      font-weight: 400;
+      margin-top: 50px;
+      padding-top: 30px;
+      margin-left: 20px;
+      width: 75px;
+    }
+    .form-tail {
+      background-color: $liteGreyColor;
+    }
+    #mobile-map {
+      padding-bottom: 28px;
+    }
+    #send-btn {
+      height: 50px;
+      width: 380px;
+      margin-top: 20px;
+      background-color: $tealColor;
+      font-size: $formFontSizeSm;
+      color: white;
+    }
   }
+  // shared label style
   input[required] + label:after {
     content:'*';
     color: $tealColor;
@@ -330,4 +425,34 @@ $inputPlaceholdColor: #aaaaaa;
   input[required]:valid + label{
     display: none;
   }
+}
+
+// Footer Area
+$footerBGColor: #c1c1c1;
+$footerFontSize: 12px;
+#footerBG{
+  @include bgGrad;
+}
+#footer{
+  @include body-width;
+  @include no-gutter;
+  margin: auto;
+  height: 70px;
+  background-color: $footerBGColor;
+  @media (min-width: 481px) {
+    #footer-block {
+      margin-top: 16px;
+      margin-left: 26px;
+    }
+    #footer-text {
+      color: white;
+      margin-left: 12px;
+      font-size: $footerFontSize;
+    }
+  }
+  @media (max-width: 480px) {}
+}
+#greyBG{
+  @include bgBotGrad;
+  height: 100px;
 }

@@ -13,7 +13,7 @@
   @media (max-width: 480px) {
     #banner {
       width: 440px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     #banner {
       width: 916px; } }
   #banner .banner-parts {
@@ -61,7 +61,7 @@
   @media (max-width: 480px) {
     #navBar {
       width: 440px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     #navBar {
       width: 916px; } }
   #navBar .no-gut {
@@ -144,11 +144,11 @@
   padding-right: 0;
   padding-left: 0;
   margin: auto;
-  height: 704px; }
+  background-color: #fbfbfb; }
   @media (max-width: 480px) {
     #form {
       width: 440px; } }
-  @media (min-width: 768px) {
+  @media (min-width: 960px) {
     #form {
       width: 916px; } }
   #form .no-gut {
@@ -159,61 +159,100 @@
   #form .star {
     font-weight: 800;
     color: #47c8ab; }
+  #form #require-text {
+    color: #787777; }
+  #form #office-text {
+    color: #47c8ab;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 22px; }
+  #form #text-block {
+    margin-top: 34px;
+    margin-bottom: 45px;
+    width: 500px;
+    color: #787777;
+    font-size: 11px; }
+  #form #location-text {
+    margin-top: 30px;
+    margin-bottom: 18px;
+    width: 200px;
+    color: #787777; }
+  #form #tel-phone-text {
+    color: #787777; }
   @media (min-width: 481px) {
-    #form #form-left {
-      color: #787777;
-      font-size: 15px;
-      margin-left: 46px;
-      margin-top: 50px; }
-      #form #form-left #form-text {
+    #form {
+      padding-top: 50px; }
+      #form #form-main {
+        width: 530px; }
+      #form #form-left {
+        color: #787777;
+        font-size: 15px;
+        padding-left: 48px; }
+      #form #form-text {
         display: inline;
         margin-right: 106px; }
-      #form #form-left #paitent-form {
+      #form #paitent-form {
         display: inline; }
-      #form #form-left #form-no {
+      #form #form-no {
         margin-left: 20px;
         margin-bottom: 30px; }
-      #form #form-left .input {
+      #form .input {
         width: 250px;
         height: 40px; }
-      #form #form-left input[required] + label {
+      #form input[required] + label {
         color: #aaaaaa;
         position: absolute; }
-      #form #form-left #first-name {
+      #form #first-name {
         margin-right: 20px;
         margin-bottom: 30px; }
-      #form #form-left #email {
+      #form #email {
         margin-right: 20px;
         margin-bottom: 30px; }
-      #form #form-left #first-name-placeholder {
-        left: 10px;
+      #form #first-name-placeholder {
+        left: 60px;
         top: 57px; }
-      #form #form-left #last-name-placeholder {
-        left: 285px;
+      #form #last-name-placeholder {
+        left: 335px;
         top: 57px; }
-      #form #form-left #email-placeholder {
-        left: 10px;
-        top: 128px; }
-      #form #form-left #phone-placeholder {
-        left: 285px;
-        top: 128px; }
-      #form #form-left #subject {
+      #form #email-placeholder {
+        left: 60px;
+        top: 127px; }
+      #form #phone-placeholder {
+        left: 335px;
+        top: 127px; }
+      #form #subject {
         width: 524px;
         margin-bottom: 30px;
         color: #aaaaaa; }
-      #form #form-left #comments-area {
+      #form #comments-area {
         width: 524px;
         height: 120px;
         margin-bottom: 30px; }
-      #form #form-left #heard {
+      #form #heard {
         display: inline;
         width: 250px;
         height: 40px;
         color: #aaaaaa;
         margin-right: 20px; }
-      #form #form-left #details-placeholder {
-        left: 285px;
-        top: 423px; } }
+      #form #details-placeholder {
+        left: 335px;
+        top: 422px; }
+      #form #desktop-form-tail {
+        margin-top: 30px; }
+      #form #require-text {
+        color: #47c8ab;
+        width: 135px;
+        display: inline; }
+      #form #send-btn {
+        height: 40px;
+        width: 90px;
+        background-color: #47c8ab;
+        font-size: 15px;
+        color: white;
+        margin-left: 295px; } }
+  @media (max-width: 570px) {
+    #form #form-left {
+      padding-left: 28px; } }
   @media (max-width: 480px) {
     #form .input {
       width: 400px;
@@ -226,8 +265,9 @@
       font-size: 18px; }
     #form #form-left {
       color: #787777;
+      text-align: center;
       margin: auto;
-      text-align: center; }
+      padding-left: 0px; }
     #form #paitent-form {
       margin-left: 265px; }
     #form input[required] + label {
@@ -236,17 +276,17 @@
       font-size: 16px;
       left: 32px; }
     #form #first-name-placeholder {
-      bottom: 710px; }
+      bottom: 1215px; }
     #form #last-name-placeholder {
-      bottom: 630px; }
+      bottom: 1135px; }
     #form #email-placeholder {
-      bottom: 550px; }
+      bottom: 1055px; }
     #form #phone-placeholder {
-      bottom: 470px; }
+      bottom: 975px; }
     #form #comments-area {
-      height: 180px; }
+      height: 250px; }
     #form #details-placeholder {
-      bottom: 15px; }
+      bottom: 451px; }
     #form #subject {
       margin-left: 20px;
       font-size: 16px;
@@ -254,11 +294,69 @@
     #form #heard {
       margin-left: 20px;
       font-size: 16px;
-      color: #aaaaaa; } }
+      color: #aaaaaa; }
+    #form #require-text {
+      color: #787777;
+      text-align: center;
+      display: block;
+      margin-top: 30px; }
+    #form #office-text {
+      color: #47c8ab;
+      font-size: 18px;
+      font-weight: 400;
+      margin-top: 50px;
+      padding-top: 30px;
+      margin-left: 20px;
+      width: 75px; }
+    #form .form-tail {
+      background-color: #fbfbfb; }
+    #form #mobile-map {
+      padding-bottom: 28px; }
+    #form #send-btn {
+      height: 50px;
+      width: 380px;
+      margin-top: 20px;
+      background-color: #47c8ab;
+      font-size: 15px;
+      color: white; } }
   #form input[required] + label:after {
     content: '*';
     color: #47c8ab; }
   #form input[required]:valid + label {
     display: none; }
+
+#footerBG {
+  background: #f2f2f2 url(../assets/imgs/bg.png) repeat-y center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+#footer {
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+  margin: auto;
+  height: 70px;
+  background-color: #c1c1c1; }
+  @media (max-width: 480px) {
+    #footer {
+      width: 440px; } }
+  @media (min-width: 960px) {
+    #footer {
+      width: 916px; } }
+  @media (min-width: 481px) {
+    #footer #footer-block {
+      margin-top: 16px;
+      margin-left: 26px; }
+    #footer #footer-text {
+      color: white;
+      margin-left: 12px;
+      font-size: 12px; } }
+
+#greyBG {
+  background: #f2f2f2 repeat-y center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100px; }
 
 /*# sourceMappingURL=style.css.map */
