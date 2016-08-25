@@ -7,7 +7,6 @@
     <?php include "includes/header.php"; ?>
   </head>
   <body>
-
     <!-- Banner -->
     <?php include "includes/markdown/banner.php"; ?>
     <!-- NavBar -->
@@ -16,6 +15,5 @@
     <?php include "includes/markdown/form.php"; ?>
     <!-- Footer -->
     <?php include "includes/markdown/footer.php"; ?>
-
   </body>
 </html>
