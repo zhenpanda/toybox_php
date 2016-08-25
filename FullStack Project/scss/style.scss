@@ -330,7 +330,7 @@ $inputPlaceholdColor: #aaaaaa;
     }
   }
   // phone view CSS
-  $placeholderOffset: 1215;
+  $placeholderOffset: 1220;
   @media (max-width: 480px) {
     .input {
       width: 400px;
@@ -430,6 +430,7 @@ $inputPlaceholdColor: #aaaaaa;
 // Footer Area
 $footerBGColor: #c1c1c1;
 $footerFontSize: 12px;
+$footerMobileFontColor: #8a8989;
 #footerBG{
   @include bgGrad;
 }
@@ -450,9 +451,33 @@ $footerFontSize: 12px;
       font-size: $footerFontSize;
     }
   }
-  @media (max-width: 480px) {}
+}
+#footer-mobile {
+  visibility: hidden;
 }
 #greyBG{
   @include bgBotGrad;
   height: 100px;
+}
+@media (max-width: 480px) {
+  #footer-mobile {
+    visibility: visible;
+    color: $footerMobileFontColor;
+    background-color: $footerBGColor;
+    width: 440px;
+    margin: auto;
+    text-align: center;
+    #logo-mobile {
+      padding-top: 50px;
+    }
+    #footer-mobile-text{
+      margin: auto;
+      margin-top: 25px;
+      width: 150px;
+    }
+    #footer-mobile-phone {
+      margin-top: 24px;
+      padding-bottom: 64px;
+    }
+  }
 }

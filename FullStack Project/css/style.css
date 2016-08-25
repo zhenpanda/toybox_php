@@ -276,17 +276,17 @@
       font-size: 16px;
       left: 32px; }
     #form #first-name-placeholder {
-      bottom: 1215px; }
+      bottom: 1220px; }
     #form #last-name-placeholder {
-      bottom: 1135px; }
+      bottom: 1140px; }
     #form #email-placeholder {
-      bottom: 1055px; }
+      bottom: 1060px; }
     #form #phone-placeholder {
-      bottom: 975px; }
+      bottom: 980px; }
     #form #comments-area {
       height: 250px; }
     #form #details-placeholder {
-      bottom: 451px; }
+      bottom: 456px; }
     #form #subject {
       margin-left: 20px;
       font-size: 16px;
@@ -353,10 +353,31 @@
       margin-left: 12px;
       font-size: 12px; } }
 
+#footer-mobile {
+  visibility: hidden; }
+
 #greyBG {
   background: #f2f2f2 repeat-y center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100px; }
+
+@media (max-width: 480px) {
+  #footer-mobile {
+    visibility: visible;
+    color: #8a8989;
+    background-color: #c1c1c1;
+    width: 440px;
+    margin: auto;
+    text-align: center; }
+    #footer-mobile #logo-mobile {
+      padding-top: 50px; }
+    #footer-mobile #footer-mobile-text {
+      margin: auto;
+      margin-top: 25px;
+      width: 150px; }
+    #footer-mobile #footer-mobile-phone {
+      margin-top: 24px;
+      padding-bottom: 64px; } }
 
 /*# sourceMappingURL=style.css.map */
