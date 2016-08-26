@@ -1,12 +1,14 @@
 <div id="navBarBG">
     <div id="navBar" class="container-fluid">
       <div class="row-fluid">
-        <div class="col-sm-6 no-gut hidden-xs">
+        <div class="col-sm-4 col-md-4 no-gut hidden-xs">
           <div id="leftImg">
             <img src="assets/imgs/logo.png" alt="" />
           </div>
         </div>
-        <div class="col-sm-6 no-gut hidden-xs">
+        <div class="col-sm-1 col-md-2 no-gut hidden-xs">
+        </div>
+        <div class="col-sm-7 col-md-6 no-gut hidden-xs">
               <div id="call">
                 <p id="contact">Call Us: <span id="phone-num">603-742-2424</span></p>
               </div>
@@ -37,6 +39,43 @@
               <span id="info-text">Please complete the form below to contact Sunshine Group</span>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="navBarMobile" class="container-fluid">
+      <div class="row-fluid">
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg no-gut">
+          <p id="nav-mobile-call">Call: 617-800-7373</p>
+          <div class="nav-img-mobile">
+            <img src="assets/imgs/logo-mobile.png" alt="" />
+            <!-- mmenu -->
+            <div id="mmenu">
+              <div class="header">
+                <a href="#menu"></div>
+                  <nav id="menu">
+                    <ul>
+                      <li><a href="#">HOME</a></li>
+                      <li><a href="#">OUR PROVIDERS</a></li>
+                      <li><a href="#">TREATMENT & CARE</a></li>
+                      <li><a href="#">RESOURCES</a></li>
+                      <li><a href="#">BLOG</a></li>
+                      <li><a href="#">LOCATIONS</a></li>
+                      <li><a href="#">CONTACT US</a></li>
+                    </ul>
+                  </nav>
+            </div>
+          </div>
+
+          <div class="nav-img-mobile">
+            <img src="assets/imgs/hero-bg-mobile.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="navBarAttach" class="container-fluid">
+      <div class="row-fluid">
+        <div class="col-xs-12 no-gut">
+          <div id="navBar-end"></div>
         </div>
       </div>
     </div>

@@ -23,14 +23,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.no-gut {
+  @include no-gutter;
+}
 // Shared
 $tealColor: #47c8ab;
 $tealLiteColor: #87e2d1;
 $greyFrontColor: #787777;
 $liteGreyColor: #fbfbfb;
 
-// Header Area
+// Banner Area
 $bannerBackgroundColor: #e1e71b;
 $bannerFontSize: 14px;
 $bannerTextColor: #6b7007;
@@ -79,6 +81,18 @@ $bannerBtnFontSize: 11px;
     height: 46px;
     margin: auto;
   }
+  @media (max-width: 480px) {
+    #divider {
+      margin-top: 20px;
+    }
+    #banner-left-btn{
+      margin-top: 10px;
+    }
+    #banner-right-btn{
+      margin-top: 10px;
+    }
+  }
+
 }
 
 // Navigation Area
@@ -87,15 +101,13 @@ $appointmentBtnColor: #b3b3b3;
 $navLinksFontSize: 14px;
 $contactFontSize: 27px;
 $infoFontSize: 15px;
+$navMobileFontSize: 16px;
 #navBarBG {
   @include bgGrad;
 }
 #navBar {
   @include body-width;
   @include no-gutter;
-  .no-gut {
-    @include no-gutter;
-  }
   margin: auto;
   // height: 390px;
   #leftImg {
@@ -150,8 +162,20 @@ $infoFontSize: 15px;
     display: inline;
     color: white;
     font-size: $navLinksFontSize;
-    margin-left: 22px;
-    margin-right: 22px;
+  }
+  // desktop list
+  @media (min-width: 481px) {
+    li{
+      margin-left: 22px;
+      margin-right: 22px;
+    }
+  }
+  // tablet view CSS
+  @media (max-width: 878px) {
+    li{
+      margin-left: 12px;
+      margin-right: 12px;
+    }
   }
   a:hover {
     opacity: .5;
@@ -178,7 +202,49 @@ $infoFontSize: 15px;
     width: 260px;
   }
 }
+#navBarMobile {
+    @include no-gutter;
+    margin: auto;
+    #nav-mobile-call{
+      width: 100%;
+      background-color: $tealColor;
+      color: white;
+      font-size: $navMobileFontSize;
+      text-align: center;
+      padding-top: 11px;
+      padding-bottom: 13px;
+      height: 40px;
+      margin-bottom: 0;
+    }
+    .nav-img-mobile {
+      margin: auto;
+      padding-top: 20px;
+    }
+    @media (max-width: 878px) {
+      .nav-img-mobile {
+        margin: auto;
+        width: 520px;
+      }
+    }
+    @media (max-width: 480px) {
+      .nav-img-mobile {
+        width: 420px;
+      }
+    }
 
+}
+#navBarAttach {
+  @include body-width;
+  @include no-gutter;
+  margin: auto;
+  $successFontSize: 20px;
+  #success {
+    font-size: $successFontSize;
+    color: $greyFrontColor;
+    margin-top: 45px;
+    margin-left: 50px;
+  }
+}
 // Form Area
 $formFontSize: 18px;
 $formFontSizeSm: 15px;
@@ -452,9 +518,17 @@ $footerMobileFontColor: #8a8989;
     }
   }
 }
-#footer-mobile {
-  visibility: hidden;
+@media (min-width: 481px) {
+  #footer-mobile {
+    visibility: hidden;
+  }
 }
+@media (max-width: 480px) {
+  #footer-mobile {
+    visibility: visible;
+  }
+}
+
 #greyBG{
   @include bgBotGrad;
   height: 100px;
@@ -479,5 +553,18 @@ $footerMobileFontColor: #8a8989;
       margin-top: 24px;
       padding-bottom: 64px;
     }
+  }
+}
+
+// mmenu css
+#mmenu {
+  .header a
+  {  background: url( ../assets/imgs/menu.png) no-repeat transparent;;
+    display: block;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 78px;
+    left: 355px;
   }
 }

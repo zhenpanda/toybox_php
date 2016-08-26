@@ -22,22 +22,21 @@
 
             <select id="subject" class="input form-control">
               <option hidden>Subject *</option>
-              <option value="one">A</option>
-              <option value="two">B</option>
-              <option value="three">C</option>
+              <option value="one">Choice A</option>
+              <option value="two">Choice B</option>
+              <option value="three">Choice C</option>
             </select>
 
-            <textarea type="input-text" class="input" id="comments-area" placeholder="Comments *"></textarea>
+            <textarea type="input-text" class="input" id="comments-area" placeholder="  Comments *"></textarea>
 
             <select id="heard" class="input form-control">
               <option hidden>How did you heard about us? *</option>
-              <option value="one">E</option>
-              <option value="two">F</option>
-              <option value="three">G</option>
+              <option value="one">Choice E</option>
+              <option value="two">Choice F</option>
+              <option value="three">Choice G</option>
             </select>
 
-            <input type="input-text"  class="input" id="details" required="required" />
-            <label for="details" id="details-placeholder">Additional referral details </label>
+            <input type="input-text"  class="input" id="details" placeholder="  Additional referral details" />
 
           </form>
           <div id="desktop-form-tail">
@@ -46,8 +45,8 @@
 
             <p class="hidden-xs hidden-sm" id="text-block">Please be aware that we cannot ensure that communications sent over the Internet are secure. This includes correspondence sent through this form or by email. If you are uncomfortable with such risks, you may contact us by phone instead of using this form. Do not include any Confidential Health information.</p>
           </div>
-          <!-- Mobile display only -->
-          <div class="hidden-md hidden-lg">
+
+          <div class="hidden-sm hidden-md hidden-lg">
             <div class="form-tail">
               <p id="office-text">Office: </p>
               <div id="mobile-map">

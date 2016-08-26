@@ -8,3 +8,8 @@
 <link rel="stylesheet" href="./css/style.css">
 <!-- Js -->
 <script src="js/site.js"></script>
+<!-- mmenu -->
+<link type="text/css" rel="stylesheet" href="./dist/css/jquery.mmenu.all.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>
+<script type="text/javascript" src="./dist/js/jquery.mmenu.all.min.js"></script>
+<script type="text/javascript">$(function() { $('nav#menu').mmenu(); });</script>
